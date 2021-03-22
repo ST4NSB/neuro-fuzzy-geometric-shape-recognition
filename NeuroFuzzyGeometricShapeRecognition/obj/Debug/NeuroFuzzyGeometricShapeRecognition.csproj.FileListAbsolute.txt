@@ -1,0 +1,15 @@
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\bin\Debug\NeuroFuzzyGeometricShapeRecognition.exe.config
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\bin\Debug\NeuroFuzzyGeometricShapeRecognition.exe
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\bin\Debug\NeuroFuzzyGeometricShapeRecognition.pdb
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\bin\Debug\NeuroFuzzyBusinessLogic.dll
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\bin\Debug\NeuroFuzzyBusinessLogic.pdb
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.csprojAssemblyReference.cache
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.Properties.Resources.resources
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.csproj.GenerateResource.cache
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.csproj.CoreCompileInputs.cache
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.csproj.CopyComplete
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.exe
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.pdb
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\bin\Debug\DataLayer.dll
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\bin\Debug\DataLayer.pdb
+D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyGeometricShapeRecognition\obj\Debug\NeuroFuzzyGeometricShapeRecognition.NeuroFuzzyView.resources
