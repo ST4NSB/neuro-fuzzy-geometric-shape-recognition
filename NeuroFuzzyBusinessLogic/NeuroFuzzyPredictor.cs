@@ -14,7 +14,7 @@ namespace NeuroFuzzyBusinessLogic
         {
             // demo function
             // logic etc.
-            return "Predicted shape: " + GeometricalShapes.Triangle;
+            return "Predicted shape: " + GeometricalShape.Triangle;
         }
     }
 }

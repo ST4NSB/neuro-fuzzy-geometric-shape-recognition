@@ -1,6 +1,6 @@
 ﻿namespace DataLayer
 {
-    public enum GeometricalShapes : byte
+    public enum GeometricalShape : byte
     {
         Square = 1,
         Triangle = 2,
