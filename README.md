@@ -1,4 +1,4 @@
-# Neuro-Fuzzy-Geometric-Shape-Recognition-
+# Neuronal Fuzzy Geometric Shape Recognition System
 
 ## Collaborators
 
