@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using DataLayer.Enums;
 
 namespace NeuroFuzzyBusinessLogic
 {

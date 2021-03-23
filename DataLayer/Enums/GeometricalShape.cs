@@ -1,4 +1,4 @@
-﻿namespace DataLayer
+﻿namespace DataLayer.Enums
 {
     public enum GeometricalShape : byte
     {

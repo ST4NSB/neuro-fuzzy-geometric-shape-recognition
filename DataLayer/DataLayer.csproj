@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeometricalShape.cs" />
+    <Compile Include="Enums\GeometricalShape.cs" />
+    <Compile Include="Models\ConfusionMatrixModel.cs" />
+    <Compile Include="Models\PredictionHistoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
