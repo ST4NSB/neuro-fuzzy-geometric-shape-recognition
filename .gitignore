@@ -12,9 +12,9 @@
 *.user
 *.sln.docstates
 
-DataLayer/bin/obj/Debug/
-NeuroFuzzyBusinessLogic/bin/obj/Debug/
-NeuroFuzzyGeometricShapeRecognition/bin/obj/Debug/
+**/DataLayer/bin/obj/Debug/
+**/NeuroFuzzyBusinessLogic/bin/obj/Debug/
+**/NeuroFuzzyGeometricShapeRecognition/bin/obj/Debug/
 
 DataLayer/bin/Debug/
 NeuroFuzzyBusinessLogic/bin/Debug/
@@ -205,6 +205,7 @@ $RECYCLE.BIN/
 
 # Visual Studio temp something
 .vs/
+**/.vs/
 
 # dotnet stuff
 project.lock.json
