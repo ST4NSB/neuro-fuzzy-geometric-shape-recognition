@@ -12,14 +12,6 @@
 *.user
 *.sln.docstates
 
-**/DataLayer/bin/obj/Debug/
-**/NeuroFuzzyBusinessLogic/bin/obj/Debug/
-**/NeuroFuzzyGeometricShapeRecognition/bin/obj/Debug/
-
-DataLayer/bin/Debug/
-NeuroFuzzyBusinessLogic/bin/Debug/
-NeuroFuzzyGeometricShapeRecognition/bin/Debug/
-
 # Build results
 [Dd]ebug/
 [Rr]elease/
