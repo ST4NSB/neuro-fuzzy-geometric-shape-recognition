@@ -1,9 +1,0 @@
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\bin\Debug\NeuroFuzzyBusinessLogic.dll
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\bin\Debug\NeuroFuzzyBusinessLogic.pdb
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\obj\Debug\NeuroFuzzyBusinessLogic.csprojAssemblyReference.cache
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\obj\Debug\NeuroFuzzyBusinessLogic.csproj.CoreCompileInputs.cache
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\obj\Debug\NeuroFuzzyBusinessLogic.dll
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\obj\Debug\NeuroFuzzyBusinessLogic.pdb
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\bin\Debug\DataLayer.dll
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\bin\Debug\DataLayer.pdb
-D:\Projects\github\Neuro-Fuzzy-Geometric-Shape-Recognition-\NeuroFuzzyBusinessLogic\obj\Debug\NeuroFuzzyBusinessLogic.csproj.CopyComplete
