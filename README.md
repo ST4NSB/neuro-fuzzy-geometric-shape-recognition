@@ -1,4 +1,4 @@
-# Neuronal Fuzzy Geometric Shape Recognition System
+# Shape Recognition System using Binary Neural Synaptic Weights Model
 
 ## Collaborators
 
