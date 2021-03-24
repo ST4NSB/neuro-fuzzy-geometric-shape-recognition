@@ -36,7 +36,7 @@ namespace NeuroFuzzyBusinessLogic
             return Math.Round(((double)correctVals / allVals) * 100.0d, roundingDigits);
         }
 
-        public static Dictionary<GeometricalShape, ConfusionMatrixModel> GetConfusionMatrixEvaluationDetails(
+        public static Dictionary<GeometricalShapeType, ConfusionMatrixModel> GetConfusionMatrixEvaluationDetails(
             PredictionHistoryModel predictionHistory, 
             int beta = 1,
             int roundingDigits = 3)
@@ -51,10 +51,10 @@ namespace NeuroFuzzyBusinessLogic
                 throw new Exception("The size of the actual testing samples is not the same as the size of the predicted values!");
             }
 
-            var tagsSet = new HashSet<GeometricalShape>(predictionHistory.ActualValues);
+            var tagsSet = new HashSet<GeometricalShapeType>(predictionHistory.ActualValues);
             tagsSet.UnionWith(predictionHistory.PredictedValues);
 
-            var results = new Dictionary<GeometricalShape, ConfusionMatrixModel>();
+            var results = new Dictionary<GeometricalShapeType, ConfusionMatrixModel>();
             var length = predictionHistory.ActualValues.Count();
             foreach(var tag in tagsSet)
             {
