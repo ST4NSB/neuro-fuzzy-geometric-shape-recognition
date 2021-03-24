@@ -5,13 +5,13 @@ namespace DataLayer
 {
     public class PredictionHistoryModel
     {
-        public List<GeometricalShape> ActualValues { get; set; }
-        public List<GeometricalShape> PredictedValues { get; set; }
+        public List<GeometricalShapeType> ActualValues { get; set; }
+        public List<GeometricalShapeType> PredictedValues { get; set; }
 
         public PredictionHistoryModel()
         {
-            ActualValues = new List<GeometricalShape>();
-            PredictedValues = new List<GeometricalShape>();
+            ActualValues = new List<GeometricalShapeType>();
+            PredictedValues = new List<GeometricalShapeType>();
         }
     }
 }

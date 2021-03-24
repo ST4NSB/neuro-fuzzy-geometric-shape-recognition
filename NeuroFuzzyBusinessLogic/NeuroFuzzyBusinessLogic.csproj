@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="NeuroFuzzyClassifier.cs" />
     <Compile Include="NeuroFuzzyEvaluation.cs" />
-    <Compile Include="NeuroFuzzyPredictor.cs" />
+    <Compile Include="BinarySynapticWeightsLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@ namespace NeuroFuzzyGeometricShapeRecognition
         private void button1_Click(object sender, EventArgs e)
         {
             // TODO: DELETE THIS
-            MessageBox.Show(NeuroFuzzyPredictor.Predict(new float[] { 1f, 2f }));
+            MessageBox.Show("test");
         }
     }
 }
