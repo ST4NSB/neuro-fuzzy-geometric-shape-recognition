@@ -8,5 +8,6 @@ namespace NeuroFuzzyBusinessLogic
 {
     public class NeuroFuzzyClassifier
     {
+        // hello
     }
 }
