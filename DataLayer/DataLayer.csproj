@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\AngleType.cs" />
     <Compile Include="Enums\GeometricalShapeType.cs" />
+    <Compile Include="Models\AngleTypeVector.cs" />
     <Compile Include="Models\ConfusionMatrixModel.cs" />
     <Compile Include="Models\PredictionHistoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

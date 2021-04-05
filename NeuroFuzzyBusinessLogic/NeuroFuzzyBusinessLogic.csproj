@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\Helpers.cs" />
     <Compile Include="NeuroFuzzyClassifier.cs" />
     <Compile Include="NeuroFuzzyEvaluation.cs" />
     <Compile Include="BinarySynapticWeightsLogic.cs" />
@@ -52,5 +54,6 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

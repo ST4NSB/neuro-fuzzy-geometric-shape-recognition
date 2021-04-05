@@ -58,6 +58,10 @@
       <Project>{B92CDFA4-860F-4F41-80B0-8AE7E8CA7538}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NeuroFuzzyBusinessLogic\NeuroFuzzyBusinessLogic.csproj">
+      <Project>{3C223F15-81EA-4E96-A5E6-8FE101B4A8A0}</Project>
+      <Name>NeuroFuzzyBusinessLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
