@@ -33,8 +33,8 @@ namespace UnitTests
             var input = new AngleTypeVector
             {
                 Acute = acute,
-                AcuteRight = acuteRight,
-                ObtuseRight = obtuseRight,
+                MediumAcute = acuteRight,
+                Right = obtuseRight,
                 Obtuse = obtuse
             };
 
@@ -50,8 +50,8 @@ namespace UnitTests
             var input = new AngleTypeVector
             {
                 Acute = acute,
-                AcuteRight = acuteRight,
-                ObtuseRight = obtuseRight,
+                MediumAcute = acuteRight,
+                Right = obtuseRight,
                 Obtuse = obtuse
             };
             
@@ -72,31 +72,31 @@ namespace UnitTests
                 new AngleTypeVector 
                 {
                     Acute = 10,
-                    AcuteRight = 1,
+                    MediumAcute = 1,
                     Obtuse = 3,
-                    ObtuseRight = 6
+                    Right = 6
                 },
                 new AngleTypeVector
                 {
                     Acute = 1,
-                    AcuteRight = 0,
+                    MediumAcute = 0,
                     Obtuse = 4,
-                    ObtuseRight = 6
+                    Right = 6
                 },
                 new AngleTypeVector
                 {
                     Acute = 0,
-                    AcuteRight = 10,
+                    MediumAcute = 10,
                     Obtuse = 34,
-                    ObtuseRight = 1
+                    Right = 1
                 },
             };
 
             var expected = new AngleTypeVector
             {
                 Acute = 3.6666666666666665d,
-                AcuteRight = 3.6666666666666665d,
-                ObtuseRight = 4.333333333333333d,
+                MediumAcute = 3.6666666666666665d,
+                Right = 4.333333333333333d,
                 Obtuse = 13.666666666666666d
             };
 
@@ -108,9 +108,9 @@ namespace UnitTests
 
             var result = _binarySynapticWeightsLogic.CalculateAverageVector(GeometricalShapeType.Circle);
             Assert.AreEqual(expected.Acute, result.Acute);
-            Assert.AreEqual(expected.AcuteRight, result.AcuteRight);
+            Assert.AreEqual(expected.MediumAcute, result.MediumAcute);
             Assert.AreEqual(expected.Obtuse, result.Obtuse);
-            Assert.AreEqual(expected.ObtuseRight, result.ObtuseRight);
+            Assert.AreEqual(expected.Right, result.Right);
         }
 
         [TestCase]
@@ -119,17 +119,17 @@ namespace UnitTests
             var avg = new AngleTypeVector
             {
                 Acute = 100.0d,
-                AcuteRight = 2.1d,
+                MediumAcute = 2.1d,
                 Obtuse = 13.66d,
-                ObtuseRight = 4.0d,
+                Right = 4.0d,
             };
 
             var input = new AngleTypeVector
             {
                 Acute = 50,
-                AcuteRight = 10,
+                MediumAcute = 10,
                 Obtuse = 35,
-                ObtuseRight = 72
+                Right = 72
             };
 
             var expected = 87.41742160462067d;

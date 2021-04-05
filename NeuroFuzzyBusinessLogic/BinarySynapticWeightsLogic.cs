@@ -96,8 +96,8 @@ namespace NeuroFuzzyBusinessLogic
             return new AngleTypeVector
             {
                 Acute = values.Average(v => (int)v.Acute),
-                AcuteRight = values.Average(v => (int)v.AcuteRight),
-                ObtuseRight = values.Average(v => (int)v.ObtuseRight),
+                MediumAcute = values.Average(v => (int)v.MediumAcute),
+                Right = values.Average(v => (int)v.Right),
                 Obtuse = values.Average(v => (int)v.Obtuse)
             };
         }
