@@ -160,6 +160,13 @@ namespace UnitTests
             }, GeometricalShapeType.Circle);
             _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
             {
+                Acute = 9,
+                MediumAcute = 1,
+                Right = 0,
+                Obtuse = 0,
+            }, GeometricalShapeType.Circle);
+            _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
+            {
                 Acute = 8,
                 MediumAcute = 2,
                 Right = 0,
@@ -170,30 +177,32 @@ namespace UnitTests
             // squares
             _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
             {
-                Acute = 4,
+                Acute = 3,
                 MediumAcute = 1,
-                Right = 1,
+                Right = 2,
                 Obtuse = 4,
             }, GeometricalShapeType.Square);_binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
             {
-                Acute = 4,
-                MediumAcute = 2,
-                Right = 0,
-                Obtuse = 4,
-            }, GeometricalShapeType.Square);_binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
-            {
-                Acute = 1,
+                Acute = 2,
                 MediumAcute = 1,
-                Right = 0,
-                Obtuse = 8,
+                Right = 5,
+                Obtuse = 2,
+            }, GeometricalShapeType.Square);
+            _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
+            { 
+                Acute = 3,
+                MediumAcute = 0,
+                Right = 4,
+                Obtuse = 3,
             }, GeometricalShapeType.Square);
             _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
             {
-                Acute = 2,
-                MediumAcute = 0,
-                Right = 1,
-                Obtuse = 7,
+                Acute = 1,
+                MediumAcute = 2,
+                Right = 3,
+                Obtuse = 4,
             }, GeometricalShapeType.Square);
+
 
             // triangles
             _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
@@ -205,21 +214,30 @@ namespace UnitTests
             }, GeometricalShapeType.Triangle);
             _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
             {
-                Acute = 1,
-                MediumAcute = 3,
-                Right = 6,
-                Obtuse = 0,
-            }, GeometricalShapeType.Triangle);_binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
-            {
                 Acute = 2,
-                MediumAcute = 2,
-                Right = 5,
-                Obtuse = 1,
-            }, GeometricalShapeType.Triangle);_binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
+                MediumAcute = 7,
+                Right = 1,
+                Obtuse = 0,
+            }, GeometricalShapeType.Triangle);
+            _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
             {
                 Acute = 1,
                 MediumAcute = 5,
                 Right = 4,
+                Obtuse = 0,
+            }, GeometricalShapeType.Triangle);
+            _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
+            {
+                Acute = 2,
+                MediumAcute = 5,
+                Right = 3,
+                Obtuse = 1,
+            }, GeometricalShapeType.Triangle);
+            _binarySynapticWeightsLogic.AddTrainingSampleToModel(new AngleTypeVector
+            {
+                Acute = 3,
+                MediumAcute = 6,
+                Right = 1,
                 Obtuse = 0,
             }, GeometricalShapeType.Triangle);
 
@@ -237,22 +255,22 @@ namespace UnitTests
             var result_square = _binarySynapticWeightsLogic.Predict(new AngleTypeVector
             {
                 Acute = 2,
-                MediumAcute = 1,
-                Right = 1,
-                Obtuse = 6,
+                MediumAcute = 2,
+                Right = 2,
+                Obtuse = 4,
             });
 
             var result_triangle = _binarySynapticWeightsLogic.Predict(new AngleTypeVector
             {
                 Acute = 2,
-                MediumAcute = 4,
-                Right = 4,
+                MediumAcute = 6,
+                Right = 2,
                 Obtuse = 0,
             });
 
-            Assert.AreEqual(GeometricalShapeType.Circle, result_circle); // 4 - circle, 1 - square, 1 - triangle
-            Assert.AreEqual(GeometricalShapeType.Square, result_square); // 1 - circle, 6 - square, 1 - triangle
-            Assert.AreEqual(GeometricalShapeType.Triangle, result_triangle); // 1 - circle, 1 - square, 6 - triangle
+            Assert.AreEqual(GeometricalShapeType.Circle, result_circle); // 6 - circle, 2 - square, 3 - triangle
+            Assert.AreEqual(GeometricalShapeType.Square, result_square); // 1 - circle, 6 - square, 5 - triangle
+            Assert.AreEqual(GeometricalShapeType.Triangle, result_triangle); // 1 - circle, 4 - square, 8 - triangle
         }
     }
 }

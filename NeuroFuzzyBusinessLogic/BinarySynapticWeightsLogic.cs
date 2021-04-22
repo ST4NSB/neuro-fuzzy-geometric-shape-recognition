@@ -295,14 +295,18 @@ namespace NeuroFuzzyBusinessLogic
         protected internal bool ExistsNotProcessedInputNodes(GeometricalShapeType currentShape)
         {
             var inputNodes = _inputTrainLayer.Where(x => x.Label == currentShape);
+            var processedKeys = new List<InputVectorModel>(_keysHistory);
+
             foreach (var input in inputNodes)
             {
                 bool found = false;
-                foreach(var key in _keysHistory)
+                foreach (var key in processedKeys)
                 {
                     if (Helpers.GetHammingDistance(key.InputNodes, input.InputNodes, VECTOR_LENGTH) == 0)
                     {
                         found = true;
+                        processedKeys.Remove(key);
+                        break;
                     }
                 }
 
@@ -318,14 +322,18 @@ namespace NeuroFuzzyBusinessLogic
         protected internal InputVectorModel GetNextNotProcessedInputNode(GeometricalShapeType currentShape)
         {
             var inputNodes = _inputTrainLayer.Where(x => x.Label == currentShape);
+            var processedKeys = new List<InputVectorModel>(_keysHistory);
+
             foreach (var input in inputNodes)
             {
                 bool found = false;
-                foreach (var key in _keysHistory)
+                foreach (var key in processedKeys)
                 {
                     if (Helpers.GetHammingDistance(key.InputNodes, input.InputNodes, VECTOR_LENGTH) == 0)
                     {
                         found = true;
+                        processedKeys.Remove(key);
+                        break;
                     }
                 }
 
