@@ -44,6 +44,8 @@
     <Compile Include="Enums\GeometricalShapeType.cs" />
     <Compile Include="Models\AngleTypeVector.cs" />
     <Compile Include="Models\ConfusionMatrixModel.cs" />
+    <Compile Include="Models\HiddenNodeModel.cs" />
+    <Compile Include="Models\InputVectorModel.cs" />
     <Compile Include="Models\PredictionHistoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
