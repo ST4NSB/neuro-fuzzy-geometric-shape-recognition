@@ -24,7 +24,7 @@ namespace NeuroFuzzyBusinessLogic
         {
             var _hullPoints = new List<Point>();
             var startPoint = FindBottomMostPoint();
-            var sortedPoints = _pointsOfInterest.OrderBy(p => Math.Atan2(p._y - startPoint._y, p._x - startPoint._x)).ToList(); // sort by angle with acording to startPoint
+            var sortedPoints = _pointsOfInterest.OrderBy(p => Math.Atan2(p.y - startPoint.y, p.x - startPoint.x)).ToList(); // sort by angle with acording to startPoint
 
             _hullPoints.Add(sortedPoints[0]);
             _hullPoints.Add(sortedPoints[1]);
@@ -60,15 +60,15 @@ namespace NeuroFuzzyBusinessLogic
 
         private Point FindBottomMostPoint()
         {
-            List<Point> aux = _pointsOfInterest.OrderBy(o => o._y).ToList();
+            List<Point> aux = _pointsOfInterest.OrderBy(o => o.y).ToList();
             return aux[0];
         }
 
         private int GetSignOfCrossProduct(Point a, Point b, Point c)
         {
-            float area = (b._x - a._x) * (c._y - a._y) - (b._y - a._y) * (c._x - a._x);
+            float area = (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
             if (area < 0) return -1; // clockwise
-            if (area > 0) return 1; // counter-clockwise
+            if (area > 0) return  1; // counter-clockwise
             return 0;                // collinear
         }
 

@@ -8,13 +8,13 @@ namespace DataLayer.Models
 {
     public class Point
     {
-        public int _x = 0;
-        public int _y = 0;
+        public int x = 0;
+        public int y = 0;
 
         public Point(int x = 0, int y = 0)
         {
-            _x = x;
-            _y = y;
+            this.x = x;
+            this.y = y;
         }
     }
 }
