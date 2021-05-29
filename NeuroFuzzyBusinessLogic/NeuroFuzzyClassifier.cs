@@ -54,9 +54,60 @@ namespace NeuroFuzzyBusinessLogic
             return _hullPoints;
         }
 
+        public List<int> BuildTangentVectors(List<Point> pointsList)
+        {
+            float currentSlope, nextSlope;
+            int tangentVectorDirectionIndex = -1;
+            Point first, second, third;
+            List<int> directionTangents = new List<int>();
+
+            // go clockwise (check 3 points at a time)
+            for (int i = pointsList.Count - 1; i >= 0; i--)   
+            {
+                first = pointsList[i];
+
+                if (i == 1)
+                {
+                    second = pointsList[i - 1];
+                    third = pointsList[pointsList.Count - 1];
+                }
+                else if (i == 0) 
+                {
+                    second = pointsList[pointsList.Count - 1];
+                    third  = pointsList[pointsList.Count - 2];
+                }
+                else
+                {
+                    second = pointsList[i - 1];
+                    third  = pointsList[i - 2];
+                }
+
+                currentSlope = CalculateSlope(first, second);
+                nextSlope = CalculateSlope(second, third);
+
+
+                if ((currentSlope >= 0 && nextSlope >= 0) || (currentSlope <= 0 && nextSlope <= 0))
+                    tangentVectorDirectionIndex++;
+
+                if ((currentSlope > 0  && nextSlope < 0)  || (currentSlope < 0 && nextSlope > 0)   ||
+                    (currentSlope == 0 && nextSlope != 0) || (currentSlope != 0 && nextSlope == 0) || 
+                    (currentSlope == 0 && nextSlope == 0)) 
+                    directionTangents.Add(tangentVectorDirectionIndex);
+            }
+            return directionTangents;
+        }
+
         #endregion
-        
+
         #region PRIVATE METHODS
+
+        private float CalculateSlope(Point first, Point second)
+        {
+            if (second.x == first.x)
+                return 0;
+            else
+                return (float)(second.y - first.y) / (second.x - first.x);
+        }
 
         private Point FindBottomMostPoint()
         {

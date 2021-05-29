@@ -87,6 +87,46 @@ namespace UnitTests
             };
             result.Should().BeEquivalentTo(expected);
         }
-        
+
+        [Test]
+        public void BuildTangentVectors_SquareShape_ExpectedBehaviour()
+        {
+
+            // Input shape points
+            var pointList = new List<Point> {
+                new Point(5,1), new Point(8,1), new Point(8,6),
+                new Point(3,5), new Point(3,3)
+            };
+
+            var nfc = new NeuroFuzzyClassifier(pointList, new Point());
+
+            // Act
+            var result = nfc.BuildTangentVectors(pointList);
+
+            // Assert
+            var expected = new List<int> { 0, 1, 2, 3, 4 };
+            result.Should().BeEquivalentTo(expected);
+        }
+
+        [Test]
+        public void BuildTangentVectors_TriangleShape_ExpectedBehaviour()
+        {
+            // Input shape points
+            var pointList = new List<Point>{
+                new Point(20,80),  new Point(25,55),  new Point(30,30),
+                new Point(40,50),  new Point(50,70),  new Point(60,90),
+                new Point(70,110), new Point(80,130), new Point(90,150),
+                new Point(70,140), new Point(40,120), new Point(20,100),
+            };
+
+            var nfc = new NeuroFuzzyClassifier(pointList, new Point());
+
+            // Act
+            var result = nfc.BuildTangentVectors(pointList);
+
+            // Assert
+            //var expected = new List<int> { 0, 1, 2, 3};
+            //result.Should().BeEquivalentTo(expected);
+        }
     }
 }
