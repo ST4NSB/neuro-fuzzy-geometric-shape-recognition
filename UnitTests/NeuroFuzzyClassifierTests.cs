@@ -109,7 +109,7 @@ namespace UnitTests
         }
 
         [Test]
-        public void BuildTangentVectors_TriangleShape_ExpectedBehaviour()
+        public void BuildTangentVectors_TriangleShape_DebugDEMO()
         {
             // Input shape points
             var pointList = new List<Point>{
@@ -123,6 +123,8 @@ namespace UnitTests
 
             // Act
             var result = nfc.BuildTangentVectors(pointList);
+            var degreesResult = nfc.TangentVectorsToDegrees(result, pointList.Count);
+            var bswInput = nfc.ConvertShapeAnglesToBSWinput(degreesResult);
 
             // Assert
             //var expected = new List<int> { 0, 1, 2, 3};

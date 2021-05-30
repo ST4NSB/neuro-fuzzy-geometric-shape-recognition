@@ -11,14 +11,16 @@ namespace NeuroFuzzyBusinessLogic
     {
         private Point _gravityCenter;
         private List<Point> _pointsOfInterest;
-       
-        #region PUBLIC METHODS
 
+        #region CONSTRUCTOR
         public NeuroFuzzyClassifier(List<Point> pointsOfInterest, Point gravityCenter)
         {
             _gravityCenter = gravityCenter;
             _pointsOfInterest = pointsOfInterest;
         }
+        #endregion
+
+        #region PUBLIC METHODS
 
         public List<Point> ComputeConvexHullGrahamScan()
         {
@@ -97,9 +99,53 @@ namespace NeuroFuzzyBusinessLogic
             return directionTangents;
         }
 
+        public List<float> TangentVectorsToDegrees(List<int> tanVectors, int numOfInterestPoints)
+        {
+            float radianDegree = 0.0f;
+            List<float> degreesList = new List<float>();
+
+            for (int i = 0; i < tanVectors.Count; i++) 
+            {
+                if (i == tanVectors.Count - 1)
+                    radianDegree = (float)(Math.Abs(tanVectors[i] - tanVectors[0]) * 2 * Math.PI) / numOfInterestPoints;
+                else
+                    radianDegree = (float)(Math.Abs(tanVectors[i] - tanVectors[i + 1]) * 2 * Math.PI) / numOfInterestPoints;
+
+                degreesList.Add(ConvertRadiansToDegrees(radianDegree));
+            }
+
+            return degreesList;
+        }
+
+        public AngleTypeVector ConvertShapeAnglesToBSWinput(List<float> angles)
+        {
+            AngleTypeVector bswInput = new AngleTypeVector();
+
+            foreach (float angle in angles)
+            {
+                if (angle >= 0   &&  angle <= 25)  bswInput.Acute++;
+                if (angle >= 26  &&  angle <= 75)  bswInput.MediumAcute++;
+                if (angle >= 76  &&  angle <= 115) bswInput.Right++;
+                if (angle >= 116 &&  angle <= 180) bswInput.Obtuse++;
+            }
+
+            return bswInput;
+        }
+
         #endregion
 
         #region PRIVATE METHODS
+        
+        private Point FindBottomMostPoint()
+        {
+            List<Point> aux = _pointsOfInterest.OrderBy(o => o.y).ToList();
+            return aux[0];
+        }
+
+        private float ConvertRadiansToDegrees(float angle)
+        {
+            return (float)(180 / Math.PI) * angle;
+        }
 
         private float CalculateSlope(Point first, Point second)
         {
@@ -107,12 +153,6 @@ namespace NeuroFuzzyBusinessLogic
                 return 0;
             else
                 return (float)(second.y - first.y) / (second.x - first.x);
-        }
-
-        private Point FindBottomMostPoint()
-        {
-            List<Point> aux = _pointsOfInterest.OrderBy(o => o.y).ToList();
-            return aux[0];
         }
 
         private int GetSignOfCrossProduct(Point a, Point b, Point c)
